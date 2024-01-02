@@ -13,7 +13,7 @@ scalaVersion := "2.13.12"
 
 // It's possible to define many kinds of settings, such as:
 
-name := "hello-world"
+name := "cats-effect-playground"
 organization := "ch.epfl.scala"
 version := "1.0"
 
@@ -26,7 +26,8 @@ version := "1.0"
 // You can define other libraries as dependencies in your build like this:
 
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
-
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.17"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.17" % "test"
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the scala-parser-combinators dependency to the set of dependencies
 // that sbt will go and fetch when it starts up.
