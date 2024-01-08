@@ -35,4 +35,20 @@ class ConsoleOutputWithEffectSpec extends AnyFlatSpec with should.Matchers {
     }
     stream.toString should be ("Some logs\nSome logs\n")
   }
+
+  "twiceOutput_v3" should "print 0 messages to the console if I don't call unsafeRunSync" in {
+    val stream = new java.io.ByteArrayOutputStream()
+    Console.withOut(stream) {
+      ConsoleOutputWithEffect.twiceOutput_v3()
+    }
+    stream.toString should be ("")
+  }
+
+  "twiceOutput_v4" should "print 0 messages to the console if I don't call unsafeRunSync" in {
+    val stream = new java.io.ByteArrayOutputStream()
+    Console.withOut(stream) {
+      ConsoleOutputWithEffect.twiceOutput_v4()
+    }
+    stream.toString should be ("")
+  }
 }
